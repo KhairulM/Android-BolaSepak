@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PastMatchDetailsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/TopLayer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_layer_height"
+        android:background="@color/colorSecondary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/Header"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/Header">
+
+            <ImageView
+                android:id="@+id/HomeBadge"
+                android:layout_width="@dimen/image_width"
+                android:layout_height="@dimen/image_height"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="24dp"
+                android:contentDescription="@string/home_logo_description"
+                android:src="@mipmap/app_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/AwayBadge"
+                android:layout_width="@dimen/image_width"
+                android:layout_height="@dimen/image_height"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="40dp"
+                android:contentDescription="@string/away_logo_descriprion"
+                android:src="@mipmap/app_icon_round"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/MatchDate"
+                style="@style/match_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/roboto_light"
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textColor="@color/colorSecondary"
+                android:textSize="@dimen/match_date"
+                app:layout_constraintEnd_toStartOf="@+id/AwayBadge"
+                app:layout_constraintStart_toEndOf="@+id/HomeBadge"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/MatchHighlighted"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="57dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="TextView"
+                android:textColor="@color/colorSecondary"
+                android:textSize="@dimen/match_score_time"
+                app:layout_constraintEnd_toStartOf="@+id/AwayBadge"
+                app:layout_constraintStart_toEndOf="@+id/HomeBadge"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/HomeTeamName"
+                style="@style/team_name"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/team_name_height"
+                android:layout_marginTop="94dp"
+                android:fontFamily="@font/roboto_medium"
+                android:inputType="textMultiLine"
+                android:text="TextView"
+                android:textColor="@color/colorSecondary"
+                android:textSize="@dimen/team_name"
+                app:layout_constraintEnd_toEndOf="@+id/HomeBadge"
+                app:layout_constraintStart_toStartOf="@+id/HomeBadge"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/AwayTeamName"
+                style="@style/team_name"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/team_name_height"
+                android:layout_marginTop="94dp"
+                android:fontFamily="@font/roboto_medium"
+                android:inputType="textMultiLine"
+                android:text="TextView"
+                android:textColor="@color/colorSecondary"
+                android:textSize="@dimen/team_name"
+                app:layout_constraintEnd_toEndOf="@+id/AwayBadge"
+                app:layout_constraintStart_toStartOf="@+id/AwayBadge"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/LocationText"
+            style="@style/headline_text"
+            android:text="@string/highlights_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Header" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/HomeGoals"
+        style="@style/headline2_text"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/home_goals"
+        android:textSize="@dimen/headline2_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/AwayGoals"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TopLayer" />
+
+    <TextView
+        android:id="@+id/AwayGoals"
+        style="@style/headline2_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/away_goals"
+        android:textAlignment="viewEnd"
+        android:textSize="@dimen/headline2_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/HomeGoals"
+        app:layout_constraintTop_toBottomOf="@+id/TopLayer" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/HomeGoalsContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/AwayGoalsContainer"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HomeGoals" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/AwayGoalsContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:textAlignment="viewEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/HomeGoalsContainer"
+        app:layout_constraintTop_toBottomOf="@+id/AwayGoals" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">BolaSepak</string>
+    <string name="today">Today, </string>
+    <string name="my_team_selector">My Team</string>
+    <string name="all_team_selector">All Team</string>
+    <string name="search_bar_hint">Team Name (e.g Arsenal)</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="away_logo_descriprion" />
+    <string name="home_logo_description" />
+    <string name="match_details">Details</string>
+    <string name="highlights_text">Highlights</string>
+    <string name="home_goals">Home Goals</string>
+    <string name="away_goals">Away Goals</string>
+    <string name="location_text">Location</string>
+    <string name="weather_text">Weather</string>
+    <string name="past_matches_text">Past \nMatches</string>
+    <string name="upcoming_matches_text">Upcoming Matches</string>
+</resources>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Match">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/MatchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/match_background">
+
+        <ImageView
+            android:id="@+id/HomeBadge"
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_height"
+            android:layout_marginStart="41dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/home_logo_description"
+            android:src="@mipmap/app_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/AwayBadge"
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_height"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="41dp"
+            android:contentDescription="@string/away_logo_descriprion"
+            android:src="@mipmap/app_icon_round"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/MatchDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="TextView"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/match_date"
+            app:layout_constraintEnd_toStartOf="@+id/AwayBadge"
+            app:layout_constraintStart_toEndOf="@+id/HomeBadge"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/MatchHighlighted"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="35dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="TextView"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/match_score_time"
+            app:layout_constraintEnd_toStartOf="@+id/AwayBadge"
+            app:layout_constraintStart_toEndOf="@+id/HomeBadge"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/HomeTeamName"
+            style="@style/team_name"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/team_name_height"
+            android:layout_marginTop="4dp"
+            android:inputType="textMultiLine"
+            android:text="TextView"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/team_name"
+            app:layout_constraintEnd_toEndOf="@+id/HomeBadge"
+            app:layout_constraintStart_toStartOf="@+id/HomeBadge"
+            app:layout_constraintTop_toBottomOf="@+id/HomeBadge" />
+
+        <TextView
+            android:id="@+id/AwayTeamName"
+            style="@style/team_name"
+            android:layout_width="wrap_content"
+            android:maxWidth="100dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="@color/textBlack"
+            app:layout_constraintEnd_toEndOf="@+id/AwayBadge"
+            app:layout_constraintStart_toStartOf="@+id/AwayBadge"
+            app:layout_constraintTop_toBottomOf="@+id/AwayBadge" />
+
+        <Button
+            android:id="@+id/MatchDetailsBtn"
+            android:layout_width="@dimen/match_details_btn_width"
+            android:layout_height="@dimen/match_details_btn_height"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/details_button_background"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/match_details"
+            android:textColor="@color/fontFocused"
+            android:textSize="@dimen/match_details_btn_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/AwayBadge"
+            app:layout_constraintStart_toEndOf="@+id/HomeBadge"
+            app:layout_constraintTop_toBottomOf="@+id/MatchHighlighted" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

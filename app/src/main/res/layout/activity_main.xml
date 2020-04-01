@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/FAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:clickable="true"
+        android:src="@drawable/search_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/Header"
+        android:layout_width="0dp"
+        android:layout_height="122dp"
+        android:background="@drawable/rounded_header"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/header_padding_start"
+        android:paddingTop="@dimen/header_padding_top"
+        android:paddingEnd="@dimen/header_padding_end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/DateTimeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/TodayText"
+                style="@style/header_text"
+                android:layout_width="wrap_content"
+                android:layout_marginEnd="2dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/today"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/DateTime"
+                style="@style/header_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_medium"
+                android:text=" Tue 9 Mar 2020"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/StepCount"
+            style="@style/header_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="0 Steps"
+            android:textSize="36sp" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ListSelector"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Header">
+
+        <Button
+            android:id="@+id/PMSelector"
+            style="@style/ListSelectorButtonFocused"
+            android:background="@drawable/rounded_active_left_selector"
+            android:focusableInTouchMode="false"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/my_team_selector"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/UPSelector"
+            style="@style/ListSelectorButtonUnfocused"
+            android:background="@drawable/rounded_inactive_right_selector"
+            android:focusableInTouchMode="false"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/all_team_selector"
+            app:layout_constraintStart_toEndOf="@+id/PMSelector"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/MatchContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:focusableInTouchMode="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ListSelector" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#357376</color>
+    <color name="colorSecondary">#E5DFDF</color>
+    <color name="fontFocused">#F2F2F2</color>
+    <color name="fontUnfocused">#828282</color>
+    <color name="colorPrimaryDark">#357376</color>
+    <color name="colorAccent">#D55252</color>
+    <color name="borderColor">#20000000</color>
+    <color name="textBlack">#2C3A4B</color>
+</resources>

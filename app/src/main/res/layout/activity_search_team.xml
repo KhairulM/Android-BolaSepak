@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchTeamActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_header"
+        android:paddingStart="@dimen/header_padding_start"
+        android:paddingTop="@dimen/header_padding_bottom"
+        android:paddingEnd="@dimen/header_padding_end"
+        android:paddingBottom="@dimen/header_padding_bottom"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/SearchBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:fontFamily="@font/roboto"
+            android:hint="@string/search_bar_hint"
+            android:imeOptions="actionSearch"
+            android:inputType="textPersonName"
+            android:textColor="@color/fontFocused"
+            android:textColorHint="@color/fontFocused"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/TeamContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="38dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Header" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,102 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="header_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/fontFocused</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ListSelectorButtonFocused">
+        <item name="android:layout_width">106dp</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@color/fontFocused</item>
+    </style>
+
+    <style name="ListSelectorButtonUnfocused">
+        <item name="android:layout_width">106dp</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@color/colorSecondary</item>
+        <item name="android:textColor">@color/fontUnfocused</item>
+    </style>
+
+    <style name="headline_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/headline_text_size</item>
+    </style>
+
+    <style name="headline2_text">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="team_name">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/team_name_height</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:inputType">textMultiLine</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:maxWidth">100dp</item>
+        <item name="android:textSize">@dimen/team_name</item>
+    </style>
+
+    <style name="match_date">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:maxWidth">100dp</item>
+        <item name="android:textColor">@color/colorSecondary</item>
+        <item name="android:textSize">@dimen/match_date</item>
+    </style>
+
+    <style name="Header">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/header_height</item>
+        <item name="android:background">@drawable/rounded_header</item>
+    </style>
+
+    <style name="ListSelectorButtonRight" parent="ListSelectorButtonUnfocused">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingRight">2dp</item>
+    </style>
+
+    <style name="ListSelectorButtonLeft" parent="ListSelectorButtonFocused">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingRight">2dp</item>
+    </style>
+
+    <style name="goals">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textColor">@color/textBlack</item>
+    </style>
+
+</resources>
